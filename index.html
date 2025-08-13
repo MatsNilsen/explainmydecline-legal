@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="utf-8" />
+  <title>ExplainMyDecline — Chrome Extension</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="ExplainMyDecline is a Chrome extension for Stripe Dashboard that explains decline codes in plain language with actionable steps." />
+  <style>
+    :root {
+      --bg:#0b0f14;
+      --card:#121821;
+      --text:#e9eef5;
+      --muted:#a9b3c1;
+      --brand:#6aa9ff;
+      --ok:#35d07f;
+    }
+    * { box-sizing:border-box }
+    body {
+      margin:0;
+      background:linear-gradient(180deg,#0b0f14, #0e1420 40%, #0b0f14);
+      color:var(--text);
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    .wrap {
+      max-width:860px;
+      margin:48px auto;
+      padding:0 16px;
+    }
+    .card {
+      background:var(--card);
+      border:1px solid #1e2733;
+      border-radius:16px;
+      padding:24px;
+      box-shadow:0 6px 24px rgba(0,0,0,.35);
+      margin-bottom:24px;
+    }
+    h1 {
+      font-size:32px;
+      margin:0 0 12px;
+    }
+    h2 {
+      font-size:20px;
+      margin:20px 0 12px;
+    }
+    p {
+      margin:0 0 12px;
+      color:var(--muted);
+    }
+    a {
+      color:var(--brand);
+      text-decoration:none;
+    }
+    a:hover {
+      text-decoration:underline;
+    }
+    .btn {
+      display:inline-block;
+      background:var(--brand);
+      color:#06121f;
+      border-radius:10px;
+      padding:10px 14px;
+      font-weight:600;
+      margin-top:8px;
+    }
+    footer {
+      margin:28px 0 0;
+      color:#7f8ba0;
+      font-size:14px;
+      text-align:center;
+    }
+    .badge {
+      display:inline-block;
+      background:#0f1a28;
+      border:1px solid #223146;
+      color:#a9c6ff;
+      border-radius:999px;
+      padding:2px 10px;
+      font-size:12px;
+      margin-left:6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>ExplainMyDecline <span class="badge">Chrome Extension</span></h1>
+      <p><strong>ExplainMyDecline</strong> integrates with the Stripe Dashboard to turn cryptic payment decline codes into clear explanations and actionable steps, directly on the declined payment page.</p>
+      <!-- TODO: replace EXTENSION_ID with your real Chrome Web Store ID -->
+      <a class="btn" href="https://chrome.google.com/webstore/detail/EXTENSION_ID" target="_blank">Install from Chrome Web Store</a>
+    </div>
+
+    <div class="card">
+      <h2>Privacy Policy</h2>
+      <p>We do not collect or store personal or payment data. All processing happens locally in your browser using data already loaded on the Stripe Dashboard page.</p>
+      <p><a href="https://matsnilsen.github.io/explainmydecline-legal/privacy.html">View full Privacy Policy</a></p>
+    </div>
+
+    <div class="card">
+      <h2>Terms of Service</h2>
+      <p>By using ExplainMyDecline, you agree to our Terms of Service.</p>
+      <p><a href="https://matsnilsen.github.io/explainmydecline-legal/terms.html">View Terms of Service</a></p>
+    </div>
+
+    <div class="card">
+      <h2>Support</h2>
+      <p>If you have questions or need help, please contact us via the Support page.</p>
+      <p><a href="https://matsnilsen.github.io/explainmydecline-legal/support.html">Go to Support</a></p>
+    </div>
+
+    <footer>
+      <p>&copy; <span id="y"></span> ExplainMyDecline. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
