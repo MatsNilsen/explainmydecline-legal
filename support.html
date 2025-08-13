@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ExplainMyDecline — Support</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Support page for the ExplainMyDecline Chrome extension." />
+  <style>
+    :root{--bg:#0b0f14;--card:#121821;--text:#e9eef5;--muted:#a9b3c1;--brand:#6aa9ff;--ok:#35d07f}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0b0f14, #0e1420 40%, #0b0f14);
+         color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial}
+    .wrap{max-width:860px;margin:48px auto;padding:0 16px}
+    .card{background:var(--card);border:1px solid #1e2733;border-radius:16px;padding:24px;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+    h1{font-size:28px;margin:0 0 12px}
+    h2{font-size:20px;margin:28px 0 12px}
+    p{margin:0 0 12px;color:var(--muted)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .btn{display:inline-block;background:var(--brand);color:#06121f;border-radius:10px;padding:10px 14px;font-weight:600}
+    .list{margin:8px 0 0 18px}
+    .badge{display:inline-block;background:#0f1a28;border:1px solid #223146;color:#a9c6ff;border-radius:999px;padding:2px 10px;font-size:12px;margin-left:6px}
+    footer{margin:28px 0 0;color:#7f8ba0;font-size:14px}
+    .grid{display:grid;gap:16px}
+    @media (min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+    code{background:#0f1a28;border:1px solid #223146;border-radius:8px;padding:2px 6px}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"ExplainMyDecline",
+    "url":"https://matsnilsen.github.io/explainmydecline-legal/support.html",
+    "potentialAction":{
+      "@type":"ContactPoint",
+      "contactType":"customer support",
+      "email":"support@example.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>ExplainMyDecline <span class="badge">Support</span></h1>
+      <p>Thanks for using the <strong>ExplainMyDecline</strong> Chrome extension. This page explains how to get help, report issues, and find legal documents.</p>
+
+      <div class="grid">
+        <section>
+          <h2>Contact</h2>
+          <p>Email us and we’ll reply as soon as possible.</p>
+          <!-- TODO: replace support@example.com with your real support email -->
+          <p><a class="btn" href="mailto:explainmydecline@gmail.com?subject=ExplainMyDecline%20Support">Email support</a></p>
+          <!-- Optional: replace with your Google Form link -->
+          <!-- <p><a href="https://forms.gle/your-form" rel="noopener">Support form</a></p> -->
+        </section>
+
+        <section>
+          <h2>Report an issue</h2>
+          <p>Please include:</p>
+          <ul class="list">
+            <li>Extension version (<code>chrome://extensions</code>)</li>
+            <li>Stripe page type (e.g., <code>payment_intent_detail</code>)</li>
+            <li>Short description + steps to reproduce</li>
+            <li>Optional: anonymized screenshot</li>
+          </ul>
+        </section>
+      </div>
+
+      <section>
+        <h2>FAQ</h2>
+        <p><strong>Does the extension collect personal or payment data?</strong><br>
+          No. All processing happens locally in your browser using data already loaded on the Stripe Dashboard page. We do not collect or transmit personal or payment data.</p>
+        <p><strong>What analytics are used?</strong><br>
+          Anonymous technical telemetry only (e.g., extension version, session ID, page type, feature usage, decline detection events). See our Privacy Policy for details.</p>
+      </section>
+
+      <section>
+        <h2>Legal</h2>
+        <p><a href="https://matsnilsen.github.io/explainmydecline-legal/privacy.html">Privacy Policy</a> ·
+           <a href="https://matsnilsen.github.io/explainmydecline-legal/terms.html">Terms of Service</a></p>
+      </section>
+
+      <footer>
+        <p>&copy; <span id="y"></span> ExplainMyDecline. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
